@@ -1,109 +1,24 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+body { background-color: #121212; color: #fff; } /* Күңгірт стиль */
 
-body {
-    font-family: 'Georgia', serif;
-    background-color: #fffaf5;
-    color: #2c3e50;
-}
+.navbar { padding: 20px; text-align: center; border-bottom: 1px solid #333; }
+.logo { font-size: 24px; font-weight: bold; letter-spacing: 2px; }
+.logo span { color: #d4af37; } /* Алтын түс */
 
-/* Навигация */
-.navbar {
-    background: #1a1a1a;
-    padding: 20px;
-    text-align: center;
-    color: white;
-}
+.hero { height: 40vh; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=1200'); background-size: cover; display: flex; flex-direction: column; justify-content: center; align-items: center; }
 
-.logo {
-    font-size: 24px;
-    letter-spacing: 3px;
-    font-weight: bold;
-}
+.container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 
-.logo span {
-    color: #c0392b;
-}
+.menu-item { background: #1e1e1e; border-radius: 15px; cursor: pointer; transition: 0.4s; overflow: hidden; border: 1px solid #333; }
+.menu-item:hover { transform: scale(1.05); border-color: #d4af37; }
+.menu-item img { width: 100%; height: 250px; object-fit: cover; }
+.menu-info { padding: 20px; }
+.price { color: #d4af37; font-weight: bold; }
 
-/* Hero секциясы */
-.hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1200&q=80');
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-}
-
-/* Мәзір торы */
-.container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-.category-title {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #c0392b;
-    display: inline-block;
-    width: 100%;
-    padding-bottom: 10px;
-}
-
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-}
-
-.menu-item {
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: 0.3s;
-}
-
-.menu-item:hover {
-    transform: translateY(-5px);
-}
-
-.menu-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.menu-info {
-    padding: 20px;
-}
-
-.menu-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.price {
-    color: #c0392b;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.ingredients {
-    font-style: italic;
-    font-size: 14px;
-    color: #7f8c8d;
-    line-height: 1.4;
-}
+/* Модальді терезе стильдері */
+.modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); }
+.modal-content { background: #1e1e1e; margin: 10% auto; padding: 30px; width: 80%; max-width: 600px; border-radius: 20px; position: relative; border: 1px solid #d4af37; }
+.close { position: absolute; right: 20px; top: 10px; font-size: 30px; cursor: pointer; color: #d4af37; }
+#modalTitle { color: #d4af37; margin-bottom: 20px; }
+.modal-body h4 { margin: 15px 0 5px; color: #ddd; }
