@@ -3,47 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akzhar Chicken | Ресторан Мәзірі</title>
+    <title>Premium Kitchen Menu</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="navbar">
-    <div class="logo">AKZHAR <span>CHICKEN</span></div>
-</nav>
-
-<header class="hero">
-    <h1>Біздің Мәзір</h1>
-    <p>Әр тағамның артында үлкен тарих пен сапа жатыр</p>
+<header class="navbar">
+    <div class="logo">LUXURY <span>DINING</span></div>
 </header>
 
+<section class="hero">
+    <h1>Таңдаулы Мәзір</h1>
+    <p>Әрбір тағам — аспаздық өнер туындысы</p>
+</section>
+
 <div class="container">
-    <h2 class="category-title">Негізгі тағамдар</h2>
-    
     <div class="menu-grid">
-        <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?auto=format&fit=crop&w=500&q=80" alt="Паста">
+        <div class="menu-item" onclick="openModal('steak')">
+            <img src="https://images.unsplash.com/photo-1546241072-48010ad28c2c?w=500" alt="Стейк">
             <div class="menu-info">
-                <div class="menu-header">
-                    <h3>Фетучини Альфредо</h3>
-                    <span class="price">3 990 ₸</span>
-                </div>
-                <p class="ingredients"><strong>Құрамы:</strong> Итальяндық паста, тауық еті, саңырауқұлақ, кілегей (сливки), пармезан ірімшігі.</p>
+                <h3>Рибай Стейк</h3>
+                <span class="price">8 500 ₸</span>
+                <p>Нәзік сиыр еті мен арнайы соус...</p>
             </div>
         </div>
 
-        <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=80" alt="Пицца">
+        <div class="menu-item" onclick="openModal('pasta')">
+            <img src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?w=500" alt="Паста">
             <div class="menu-info">
-                <div class="menu-header">
-                    <h3>Маргарита Пиццасы</h3>
-                    <span class="price">2 800 ₸</span>
-                </div>
-                <p class="ingredients"><strong>Құрамы:</strong> Жұқа қамыр, моцарелла ірімшігі, жаңа піскен қызанақтар, базил, фирмалық томат соусы.</p>
+                <h3>Теңіз өнімдері пастасы</h3>
+                <span class="price">4 200 ₸</span>
+                <p>Итальяндық классика, асшаяндармен...</p>
+            </div>
+        </div>
+
+        <div class="menu-item" onclick="openModal('dessert')">
+            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500" alt="Тәтті">
+            <div class="menu-info">
+                <h3>Шоколадты Фондан</h3>
+                <span class="price">2 500 ₸</span>
+                <p>Ыстық шоколад пен балмұздақ...</p>
             </div>
         </div>
     </div>
 </div>
 
+<div id="recipeModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <div class="modal-body">
+            <div id="modalIngredients"></div>
+            <div id="modalRecipe"></div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
