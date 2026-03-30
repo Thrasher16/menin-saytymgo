@@ -3,46 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Kitchen Menu</title>
+    <title>FastFood Express | Тез әрі Дәмді</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header class="navbar">
-    <div class="logo">LUXURY <span>DINING</span></div>
+    <div class="logo">FAST<span>BURGER</span></div>
 </header>
 
-<section class="hero">
-    <h1>Таңдаулы Мәзір</h1>
-    <p>Әрбір тағам — аспаздық өнер туындысы</p>
+<section class="promo-banner">
+    <h1>ЫСТЫҚ ЖӘНЕ ДӘМДІ!</h1>
+    <p>Ең үздік ингредиенттерден жасалған фастфуд</p>
 </section>
 
 <div class="container">
     <div class="menu-grid">
-        <div class="menu-item" onclick="openModal('steak')">
-            <img src="https://images.unsplash.com/photo-1546241072-48010ad28c2c?w=500" alt="Стейк">
+        <div class="menu-item burger" onclick="openModal('cheeseburger')">
+            <div class="badge">TOP</div>
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500" alt="Чизбургер">
             <div class="menu-info">
-                <h3>Рибай Стейк</h3>
-                <span class="price">8 500 ₸</span>
-                <p>Нәзік сиыр еті мен арнайы соус...</p>
+                <h3>Чизбургер XL</h3>
+                <span class="price">1 800 ₸</span>
+                <button class="order-btn">Рецептін көру</button>
             </div>
         </div>
 
-        <div class="menu-item" onclick="openModal('pasta')">
-            <img src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?w=500" alt="Паста">
+        <div class="menu-item side" onclick="openModal('fries')">
+            <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=500" alt="Фри">
             <div class="menu-info">
-                <h3>Теңіз өнімдері пастасы</h3>
-                <span class="price">4 200 ₸</span>
-                <p>Итальяндық классика, асшаяндармен...</p>
+                <h3>Картоп Фри</h3>
+                <span class="price">800 ₸</span>
+                <button class="order-btn">Рецептін көру</button>
             </div>
         </div>
 
-        <div class="menu-item" onclick="openModal('dessert')">
-            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500" alt="Тәтті">
+        <div class="menu-item chicken" onclick="openModal('nuggets')">
+            <img src="https://images.unsplash.com/photo-1562967914-608f82629710?w=500" alt="Наггетстер">
             <div class="menu-info">
-                <h3>Шоколадты Фондан</h3>
-                <span class="price">2 500 ₸</span>
-                <p>Ыстық шоколад пен балмұздақ...</p>
+                <h3>Чикен Наггетс (9 дана)</h3>
+                <span class="price">1 400 ₸</span>
+                <button class="order-btn">Рецептін көру</button>
             </div>
         </div>
     </div>
@@ -52,10 +54,9 @@
     <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
         <h2 id="modalTitle"></h2>
-        <div class="modal-body">
-            <div id="modalIngredients"></div>
-            <div id="modalRecipe"></div>
-        </div>
+        <div id="modalIngredients"></div>
+        <hr>
+        <div id="modalRecipe"></div>
     </div>
 </div>
 
